@@ -6,6 +6,7 @@ toc_footers:
 
 includes:
   - users
+  - webhooks
   - errors
 
 search: true

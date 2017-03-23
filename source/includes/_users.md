@@ -18,8 +18,11 @@
 }
 ```
 
-> Response body:
+> Response:
 
+```http
+HTTP/1.1 200 OK
+```
 ```json
 {
 	"user":
@@ -68,8 +71,11 @@ phone | телефон
 	"user_id" : "1"
 }
 ```
-> Response body:
+> Response:
 
+```http
+HTTP/1.1 200 OK
+```
 ```json
 {"access_token" : "535fd66a27df6c19002392b9a5e7c536f716033e7168cca4e782e7cb349c304f"}
 ```
@@ -110,8 +116,11 @@ access_token | токен, с которым можно выполнять за�
 }
 ```
 
-> Response body:
+> Response:
 
+```http
+HTTP/1.1 200 OK
+```
 ```json
 {
   "user":
@@ -162,8 +171,11 @@ phone | телефон
 }
 ```
 
-> Response body:
+> Response:
 
+```http
+HTTP/1.1 200 OK
+```
 ```json
 {
   "user":
