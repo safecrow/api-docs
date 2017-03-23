@@ -6,6 +6,8 @@ toc_footers:
 
 includes:
   - users
+  - orders
+  - attachments
   - webhooks
   - errors
 
