@@ -10,6 +10,7 @@ includes:
   - attachments
   - webhooks
   - errors
+  - ajax
 
 search: true
 ---
