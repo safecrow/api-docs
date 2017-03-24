@@ -136,3 +136,64 @@ order.transitions[n].locale.transition | Обозначение действия
 order.locale | Локаль
 order.locale.state | Русскоязычоное обозначение статуса
 order.locale.display_state | Обозначение статуса с учетом текущего запроса изменения (может быть например  - Продавец/покупатель зарпосил продление сделки)
+
+## Расчет комиссии
+
+Позволяет предварительно расчитать комиссию и стоимость для различных вариантов оплаты
+
+### HTTP REQUEST
+
+`POST /orders/calc_commission`
+
+> POST /orders/calc_commission
+
+```json
+{
+  "cost" : 10000000,
+  "commission_payer" : "50/50"
+}
+```
+
+> Response
+
+```http
+HTTP/1.1 200 OK
+```
+```json
+{
+  "cost" : 10000000.0,
+  "commission" : 100000.0,
+  "commission_description" : "1%",
+  "mandarin_commission" : 2.4,
+  "gateway_commission" : 2.9,
+  "supplier_receive" : 9950000.0,
+  "consumer_pay" : {
+    "invoice" : 10050000.0,
+    "gateway" : 10341450.0,
+    "mandarin" : 10211050.0
+  }
+}
+```
+
+### Параметры в запросе
+
+Ключ | Обязательно | Описание
+--------- | ------- | -----------
+cost | да | Стоимость сделки
+commission_payer | да |	Кто будет оплачивать комиссию (consumer|supplier|50/50)
+
+### Возвращает
+
+Ключ | Значение/Формат значения
+--------- | -----------
+cost |	Стоимость сделки (будет равна указанному значению cost из запроса)
+commission | Комиссия SafeCrow
+commission_description |	Текстовое описание комиссии (например: 4%)
+supplier_receive |	Сумма, которую получит продавец
+mandarin_commission |	Комиссия шлюза мандарина в %
+gateway_commission |	Комиссия шлюза робокассы в %
+consumer_pay | Стоимость оплаты в зависимости от варианта, JSON объект
+consumer_pay.invoice |	Стоимость оплаты через банковский счет
+consumer_pay.gateway |	Стоимость оплаты через шлюз робокассы (с учетом комиссии шлюза)
+consumer_pay.mandarin |	Стоимость оплаты через шлюз мандарин (с учетом комиссии шлюза)
+
