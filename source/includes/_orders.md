@@ -339,3 +339,54 @@ meta.links.next_page | Следующая страница
 meta.links.previous_page | Предыдущая страница
 meta.links.first_page | Первая страница
 meta.links.last_page | Последняя страница
+
+## Отображение
+
+### HTTP REQUEST
+
+`GET /orders/:id`
+
+> GET /orders/9
+
+> Response
+
+```http
+HTTP/1.1 200 OK
+```
+```json
+{
+  "order" : {
+    "id" : 9,
+    "state" : "pending",
+    "order_description" : "Сапоги",
+    "supply_description" : null,
+    "cost" : 400.0,
+    "supply_cost" : null,
+    "supply_days" : null,
+    "verify_days" : 4,
+    "commission_payer" : "consumer",
+    "commission" : 6.0,
+    "owner_id" : 13,
+    "supplier_billing_info" : null,
+    "consumer_id" : 14,
+    "consumer_billing_info" : null,
+    "consumer" : {
+      "id" : 14,
+      "email" : "test4@test.com",
+      "phone" : "90813323347",
+      "name" : null
+    },
+    "supplier_id" : 13,
+    "supplier" : {
+      "id" : 13,
+      "email" : "test2@test.com",
+      "phone" : "90813323346",
+      "name" : null
+    }
+  }
+}
+```
+
+### Возвращает
+
+Возвращает [сделку](#part-dec3052b853e0b29) с переданным id.
