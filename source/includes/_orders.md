@@ -262,3 +262,80 @@ HTTP/1.1 200 OK
 
 [Объект сделки](#part-dec3052b853e0b29)
 
+## Список
+
+Выводит список сделок, в которых участвует текущий пользователь. Сделки отсортированы по времени создания в обратном порядке (последние сначала)
+
+### HTTP REQUEST
+
+`GET /orders`
+
+> GET /orders
+
+> Response
+
+```http
+HTTP/1.1 200 OK
+```
+```json
+{
+  "orders" : [
+     {
+       "id" : 17,
+       "state" : "pending",
+       "order_description" : "Сапоги",
+       "supply_description" : null,
+       "cost" : 23.0,
+       "supply_cost" : null,
+       "supply_days" : null,
+       "verify_days" : 3,
+       "commission_payer" : "consumer",
+       "commission" : 6.0,
+       "owner_id" : 21,
+       "consumer_id" : null,
+       "supplier_id" : 21,
+       "consumer" : null,
+       "supplier" : {
+         "id" : 21,
+         "email" : "test7@test.com",
+         "phone" : null,
+         "name" : null
+       }
+     }
+  ]
+  "meta" : {
+    "page" : 1,
+    "total" : 3,
+    "total_pages" : 1,
+    "links" : {
+      "self" : "http://localhost:3000/api/v1/orders?page=1",
+      "next_page" : null,
+      "previous_page" : null,
+      "first_page" : null,
+      "last_page" : null
+    }
+  }
+}
+```
+
+### Параметры в запросе
+
+`page` - номер страницы
+
+`per` - количество сделок на одной странице (по умолчанию - 10)
+
+### Возвращает
+
+Ключ | Значение/Формат значения
+--------- | -----------
+orders | Массив из сделок [order](#part-dec3052b853e0b29)
+meta | JSON объект - метаданные коллекции
+meta.page | Номер текущей страницы
+meta.total | Общее количество сделок, в которых участвует текущий пользователь
+meta.total_pages | Общее количество страниц
+meta.links | JSON объект
+meta.links.self | Текущая страница
+meta.links.next_page | Следующая страница
+meta.links.previous_page | Предыдущая страница
+meta.links.first_page | Первая страница
+meta.links.last_page | Последняя страница
