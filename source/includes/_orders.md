@@ -197,3 +197,68 @@ consumer_pay.invoice |	Стоимость оплаты через банковс
 consumer_pay.gateway |	Стоимость оплаты через шлюз робокассы (с учетом комиссии шлюза)
 consumer_pay.mandarin |	Стоимость оплаты через шлюз мандарин (с учетом комиссии шлюза)
 
+## Изменение сделки
+
+Изменение отдельных параметров заказа.
+
+<aside class="notice">
+Изменить можно любое редактируемое (из тех, которые задаются при создании) поле, пока сделка не подтверждена покупателем.
+</aside>
+
+### HTTP REQUEST
+
+`PATCH /orders/:id`
+
+> PATCH /orders/9
+
+```json
+{
+  "order" : {
+    "consumer_id" : "14"
+  }
+}
+````
+
+> Response
+
+```http
+HTTP/1.1 200 OK
+```
+```json
+{
+  "order" : {
+    "id" : 9,
+    "state" : "pending",
+    "order_description" : "Сапоги",
+    "supply_description" : null,
+    "cost" : 400.0,
+    "supply_cost" : null,
+    "supply_days" : null,
+    "verify_days" : 4,
+    "commission_payer" : "consumer",
+    "commission" : 6.0,
+    "owner_id" : 13,
+    "supplier_billing_info" : null,
+    "consumer_id" : 14,
+    "consumer_billing_info" : null,
+    "consumer" : {
+      "id" : 14,
+      "email" : "test4@test.com",
+      "phone" : "90813323347",
+      "name" : null
+    },
+    "supplier_id" : 13,
+    "supplier" : {
+      "id" : 13,
+      "email" : "test2@test.com",
+      "phone" : "90813323346",
+      "name" : null
+    }
+  }
+}
+```
+
+### Возвращает
+
+[Объект сделки](#part-dec3052b853e0b29)
+
