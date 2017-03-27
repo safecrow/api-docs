@@ -1029,12 +1029,12 @@ billing_info.payment_params.bik |	всегда | БИК
 
 **returned => payout_initiated**
 
-**payout_initiated => done**(При выплате на карты)
+**payout_initiated => done** (При выплате на карты)
 
 ### Переходы, совершаемые менеджером SafeCrow
 
 **rejected => escalation**
 
-**payment_verification => paid (при оплате квитанцией)**
+**payment_verification => paid** (при оплате квитанцией)
 
-**payout_initiated => done**(При выплате по расчетному счету)
+**payout_initiated => done** (При выплате по расчетному счету)
