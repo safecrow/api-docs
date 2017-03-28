@@ -7,6 +7,13 @@ toc_footers:
 includes:
   - users
   - orders
+  - orders_payment
+  - orders_perform_transition
+  - orders_claim
+  - orders_shipping
+  - orders_billing_info
+  - orders_change
+  - orders_transitions
   - attachments
   - webhooks
   - errors

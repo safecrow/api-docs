@@ -173,9 +173,7 @@ app_subscription.confirmed | boolean - Подтверждена ли подпи�
 
 `DELETE /subscriptions`
 
-```HTTP
-DELETE /subscriptions?api_key=your_api_key&secret=your_secret&request_time=2017-02-10T14:13:46Z
-```
+> DELETE /subscriptions?api_key=your_api_key&secret=your_secret&request_time=2017-02-10T14:13:46Z
 
 > Response
 
