@@ -22,12 +22,6 @@
 
 ### Покупатель
 
-**pending => payment_verification**
-
-Условия:
-
-* Должна пройти оплата или сформирована квитанция
-
 **shipping => received**
 
 **shipping => rejected**
