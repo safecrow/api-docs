@@ -12,6 +12,7 @@ includes:
   - orders_claim
   - orders_shipping
   - orders_billing_info
+  - orders_set_billing_info
   - orders_change
   - orders_transitions
   - attachments

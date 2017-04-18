@@ -214,9 +214,9 @@ phone | телефон
 
 ### HTTP REQUEST
 
-`GET  me/credit_cards`
+`GET  /me/credit_cards`
 
-> GET  me/credit_cards?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
+> GET  /me/credit_cards?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
 
 > Response:
 
@@ -252,9 +252,9 @@ card_expiration_year | Год
 
 ### HTTP REQUEST
 
-`GET  me/billing_infos`
+`GET  /me/billing_infos`
 
-> GET  me/billing_infos?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
+> GET  /me/billing_infos?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
 
 > Response:
 
