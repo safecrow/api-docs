@@ -206,3 +206,79 @@ name | Имя или ФИО
 email | email
 phone | телефон
 
+## Кредитные карты
+
+<aside class="notice">
+Возвращает только подтвержденные карты(статус 'success')
+</aside>
+
+### HTTP REQUEST
+
+`GET  me/credit_cards`
+
+> GET  me/credit_cards?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
+
+> Response:
+
+```http
+HTTP/1.1 200 OK
+```
+```json
+{
+ "credit_cards" : [
+    {
+      "id" : 1,
+      "card_number" : "469206XXXXXX9192",
+      "status" : "success",
+      "card_expiration_year" : 18,
+      "card_expiration_month" : 11
+    }
+  ]
+}
+```
+
+### Возвращает
+
+Ключ | Значение/Формат значения
+--------- | -----------
+credit_cards |  Массив из кредитный карт
+id | ID карты
+status | Статус привязки карты
+card_number |  Замаскированный номер карты
+card_expiration_month | Месяц
+card_expiration_year | Год
+
+## Банковские реквизиты
+
+### HTTP REQUEST
+
+`GET  me/billing_infos`
+
+> GET  me/billing_infos?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
+
+> Response:
+
+```http
+HTTP/1.1 200 OK
+```
+```json
+{
+  "billing_infos" : [
+    {
+      "id"  : 3,
+      "billing_type"  : "bank_account",
+      "holder_type" : "personal",
+      "payment_params"  : {
+        "name"  : "Брюс Уэйн",
+        "bik" : "044525225",
+        "account" : "30101810400000000225"
+      },
+      "title" : "30101810400000000225"
+    }
+  ]
+}
+```
+
+### Возвращает
+
+Массив с [ банковскими реквизитами ](#part-98d4a2f0916dbebe)
