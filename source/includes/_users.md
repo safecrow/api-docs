@@ -14,7 +14,7 @@
 	"secret" : "your_secret",
 	"request_time" : "2017-02-10T08:56:34+0000",
 	"email" : "test@test.com",
-	"accept_conditions" : true
+	"accepts_conditions" : true
 }
 ```
 
@@ -41,8 +41,8 @@ HTTP/1.1 200 OK
 --------- | ------- | -----------
 Аутентификация приложения | да | api_key, secret, request_time
 name | нет | Имя или ФИО
-email | нет, если указан phone | 
-phone | нет, если указан email | 
+email | нет, если указан phone |
+phone | нет, если указан email |
 accepts_conditions | да | true, Сообщает, что пользователь ознакомлен с условиями использования сервиса
 
 ### Возвращает
@@ -138,8 +138,8 @@ HTTP/1.1 200 OK
 Ключ | Обязательно | Описание
 --------- | ------- | -----------
 Аутентификация приложения | да | api_key, secret, request_time
-email | нет, если указан phone | 
-phone | нет, если указан email | 
+email | нет, если указан phone |
+phone | нет, если указан email |
 
 ### Возвращает
 
@@ -193,8 +193,8 @@ HTTP/1.1 200 OK
 Ключ | Обязательно | Описание
 --------- | ------- | -----------
 Аутентификация приложения | да | api_key, secret, request_time
-email | нет | 
-phone | нет | 
+email | нет |
+phone | нет |
 
 ### Возвращает
 
