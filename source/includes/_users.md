@@ -248,6 +248,20 @@ card_number |  Замаскированный номер карты
 card_expiration_month | Месяц
 card_expiration_year | Год
 
+`GET  /me/bind_card`
+
+> GET  /me/bind_card?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
+
+### Возвращает
+
+Ключ | Значение/Формат значения
+--------- | -----------
+id | Идентификатор карты полученный от "Мандарин"
+redirect_url | https://secure.mandarinpay.com/CardBindings/New + полученный id
+
+
+
+
 ## Банковские реквизиты
 
 ### HTTP REQUEST
@@ -282,3 +296,51 @@ HTTP/1.1 200 OK
 ### Возвращает
 
 Массив с [ банковскими реквизитами ](#part-b6e1cdfbb96325c1)
+
+`POST  /me/billing_info_without_order` - создает банковские реквизиты для пользователя
+
+> POST /me/billing_info_without_order
+
+```json
+{
+  "billing_info" : [
+  {
+    "holder_type" : "personal",
+    "billing_type" : "bank_account",
+    "payment_params" : {
+      "name" : "Брюс Уэйн",
+      "bik" : "042202603",
+      "account" : "30101810400000000225"
+      "organization" : "Mememem",
+      "inn" : "0238526872",
+      "ogrn" : "5077746887312"
+    },
+    "title" : "30101810400000000225",
+    }
+  ]
+}
+```
+
+> Response:
+
+```http
+HTTP/1.1 200 OK
+```
+```json
+
+{
+  "billing_info":
+  {
+    "id" : 64,
+    "billing_type" : "bank_account",
+    "holder_type" : "personal",
+    "payment_params" : {
+      "name" : "Брюс Уэйн",
+      "bik" : "042202603",
+      "account" : "30101810400000000225"
+    },
+    "title" : "30101810400000000225",
+    "bank_name" : "АО \"АЛЬФА-БАНК\"
+}
+
+```
