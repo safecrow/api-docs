@@ -2,8 +2,6 @@ FROM ruby:2.2
 
 ENV TERM xterm
 ENV LANG C.UTF-8
-ENV http_proxy http://172.28.4.7:8080
-ENV https_proxy http://172.28.4.7:8080
 
 RUN git config --global url.https://github.com/.insteadOf git://github.com/
 
