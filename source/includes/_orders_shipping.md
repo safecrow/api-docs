@@ -6,7 +6,7 @@
 
 `GET /orders/:id/shipping` - Доставка просмотр. Возвращает tracking.
 
-`POST /orders/:id/shipping` - Возврат создание.
+`POST /orders/:id/shipping_back` - Возврат создание.
 
 `GET /orders/:id/shipping_back` - Возврат просмотр. Возвращает tracking.
 
