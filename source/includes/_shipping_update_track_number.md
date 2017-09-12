@@ -7,7 +7,7 @@
 `PATCH /orders/:order_id/shipping/track_number` - изменяет track_number при условии, если действия происходят от имени продавца и сделка
 имеет статус shipping.
 
-> POST /orders/:order_id/shipping/track_number
+> PATCH /orders/:order_id/shipping/track_number
 
 ```json
 {
@@ -30,7 +30,7 @@
 `PATCH /orders/:order_id/shipping/track_number` - изменяет track_number при условии, если действия происходят от имени покупателя и сделка
 имеет статус shipping_back.
 
-> POST /orders/:order_id/shipping_back/track_number
+> PATCH /orders/:order_id/shipping_back/track_number
 
 ```json
 {
