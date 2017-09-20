@@ -294,12 +294,11 @@ HTTP/1.1 200 OK
 ```
 
 ### Возвращает
+Массив с [ банковскими реквизитами ](#billing-info-array)
 
-Массив с [ банковскими реквизитами ](#part-b6e1cdfbb96325c1)
+`POST  /me/billing_info` - создает банковские реквизиты для пользователя
 
-`POST  /me/billing_info_without_order` - создает банковские реквизиты для пользователя
-
-> POST /me/billing_info_without_order
+> POST /me/billing_info
 
 ```json
 {
