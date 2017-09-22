@@ -15,6 +15,7 @@ includes:
   - orders_set_billing_info
   - orders_change
   - orders_transitions
+  - shipping_update_track_number
   - attachments
   - webhooks
   - errors
