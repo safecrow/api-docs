@@ -30,7 +30,7 @@ search: true
 
 `https://www.safecrow.ru/api/v1` - основной сервер
 
-`http://dev.safecrow.ru/api/v1` - тестовый сервер
+`https://dev.safecrow.ru/api/v1` - тестовый сервер
 
 ## Формат данных / формат запроса
 
