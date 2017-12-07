@@ -250,7 +250,14 @@ card_expiration_year | Год
 
 `GET  /me/bind_card`
 
-> GET  /me/bind_card?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28
+### Параметры в запросе
+
+Ключ | Обязательно | Описание
+--------- | ------- | --------
+redirect_to | Нет | Адрес, куда перейдет пользователь, после завершения оплаты
+
+> GET  /me/bind_card?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28&
+										 redirect_to=http:\\www.example.ru
 
 ### Возвращает ссылку для привязки новой карты
 
