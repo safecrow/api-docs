@@ -29,7 +29,6 @@ HTTP/1.1 200 OK
 
 `GET /orders/:id/transitions` - Доступные перемещения
 
-`POST /orders/:id/transitions` - Совершить перемещение
 
 ### Доступные перемещения
 
@@ -46,6 +45,8 @@ transitions[n].locale.to_state | Русскоязычное обозначени
 transitions[n].locale.transition | Русскоязычное обозначение действия перемещения
 
 ### Совершить перемещение
+
+`POST /orders/:id/transitions` - Совершить перемещение
 
 > POST /orders/17/transitions
 

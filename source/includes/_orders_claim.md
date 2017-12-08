@@ -1,4 +1,4 @@
-## Жалоба
+## Претензия 
 
 <aside class="notice">
 Сделка должна быть в статусе paid (если тип shipping_missed) или shipping (для состальных типов)
@@ -50,8 +50,8 @@ HTTP/1.1 201 Created
 Ключ | Обязательно | Описание
 --------- | ------- | -----------
 claim |	да | JSON объект
-claim.reason |	да |	Причина жалобы, может быть: <br/>shipping_missed – Товар не был отправлен (заводится в статусе сделки paid) <br/>wrong_package – Товар не соответствует описанию <br/>package_broken – Наличие повреждений <br/>missing_goods – Отсутствуют детали <br/>to_late – Не получил товар в определенный срок <br/>not_sended – Товар не был отправлен <br/>other – Другая причина
-claim.description |	да |	Комментарий к жалобе
+claim.reason |	да |	Причина претензии, может быть: <br/>shipping_missed – Товар не был отправлен (заводится в статусе сделки paid) <br/>wrong_package – Товар не соответствует описанию <br/>package_broken – Наличие повреждений <br/>missing_goods – Отсутствуют детали <br/>to_late – Не получил товар в определенный срок <br/>not_sended – Товар не был отправлен <br/>other – Другая причина
+claim.description |	да |	Комментарий к претензии
 claim.attachment |	[Вложенный файл](#part-728293b1f23ce809)
 
 ### Возвращает
@@ -59,8 +59,8 @@ claim.attachment |	[Вложенный файл](#part-728293b1f23ce809)
 Ключ | Значение/Формат значения
 --------- | -----------
 claim |	JSON объект
-claim.id |	ИД жалобы
-claim.reason |	Причина жалобы
-claim.description |	Комментарий к жалобе
+claim.id |	ИД претензии
+claim.reason |	Причина претензии
+claim.description |	Комментарий к претензии 
 claim.attachment |	[Вложенный файл](#part-728293b1f23ce809)
 

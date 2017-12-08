@@ -80,5 +80,21 @@ tracking.created_at |	Дата создания
 
 ### Параметры в запросе
 
-Те же, что при создании доставки
+Ключ | Обязательно | Описание
+--------- | ------- | -----------
+tracking |	да |	JSON объект
+tracking.company | нет |	Компания доставки
+tracking.track_number |	нет |	Номер доставки (строка)
+tracking.attachment |	[Вложенный файл](#part-728293b1f23ce809)
+
+### Возвращает
+
+Ключ | Значение/Формат значения
+--------- | -----------
+tracking |	JSON объект
+tracking.id |	ИД доставки
+tracking.company |	Компания доставки
+tracking.track_number |	Номер доставки
+tracking.attachment |	[Вложенный файл](#part-728293b1f23ce809)
+tracking.created_at |	Дата создания
 

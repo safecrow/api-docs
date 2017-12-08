@@ -27,7 +27,7 @@
 
 ### Работает, когда покупатель отказался по тем или иным причнинам от товара и товар в пути к продавцу
 
-`PATCH /orders/:order_id/shipping/track_number` - изменяет track_number при условии, если действия происходят от имени покупателя и сделка
+`PATCH /orders/:order_id/shipping_back/track_number` - изменяет track_number при условии, если действия происходят от имени покупателя и сделка
 имеет статус shipping_back.
 
 > PATCH /orders/:order_id/shipping_back/track_number
