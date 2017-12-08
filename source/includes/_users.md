@@ -209,7 +209,8 @@ phone | телефон
 ## Кредитные карты
 
 <aside class="notice">
-Возвращает только подтвержденные карты(статус 'success')
+Возвращает все карты пользователя. Карты, прошедшие валидацию меют статус 'success'. К сделкам для выплаты можно привязоватьь только
+карты со статусом 'success'.
 </aside>
 
 ### HTTP REQUEST
@@ -257,7 +258,7 @@ card_expiration_year | Год
 redirect_to | Нет | Адрес, куда перейдет пользователь, после завершения оплаты
 
 > GET  /me/bind_card?access_token=4c6842c8e96173d5b993fae04b6268cb28c0576ce27a9c3dc64a6de8d28&
-										 redirect_to=http:\\www.example.ru
+										 redirect_to=http://www.example.ru
 
 ### Возвращает ссылку для привязки новой карты
 
