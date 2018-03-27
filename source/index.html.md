@@ -23,8 +23,12 @@ includes:
 
 search: true
 ---
+# Общее  
+<aside class="warning">
+**ВНИМАНИЕ: все новые подключения производятся по Апи версии 3 APIv3**   [https://github.com/safecrow/docs-apiv3](https://github.com/safecrow/docs-apiv3).  
 
-# Общее
+К Апи версии 1 подключения больше не производятся, документация сохранена как справочная информация для ранее поключичившихся партнеров.
+</aside>  
 
 ## API URLS
 
