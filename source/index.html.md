@@ -25,7 +25,7 @@ search: true
 ---
 # Общее  
 <aside class="warning">
-**ВНИМАНИЕ: все новые подключения производятся по Апи версии 3 APIv3**   [https://github.com/safecrow/docs-apiv3](https://github.com/safecrow/docs-apiv3).  
+<b>ВНИМАНИЕ: все новые подключения производятся по Апи версии 3 APIv3</b>  <a href="https://github.com/safecrow/docs-apiv3">https://github.com/safecrow/docs-apiv3</a>.  
 
 К Апи версии 1 подключения больше не производятся, документация сохранена как справочная информация для ранее поключичившихся партнеров.
 </aside>  
